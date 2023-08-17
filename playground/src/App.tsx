@@ -1,6 +1,5 @@
 /* eslint-disable */
-import { LoadingButton } from 'xtools/components'
-import { isInt } from 'xtools/utils'
+import { LoadingButton, isInt } from 'xtools'
 
 function App() {
 	console.log(isInt('1'))
