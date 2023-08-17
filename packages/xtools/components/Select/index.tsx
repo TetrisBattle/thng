@@ -16,7 +16,7 @@ export const Select = forwardRef<HTMLDivElement, SelectProps>(
 				SelectProps={{
 					onClose: () => {
 						setTimeout(() => {
-							(document.activeElement as HTMLElement).blur()
+							;(document.activeElement as HTMLElement).blur()
 						}, 0)
 					},
 				}}
