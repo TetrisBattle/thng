@@ -1,4 +1,4 @@
-import { Header } from 'xtools/components'
+import { LoadingButton } from 'xtools/components'
 import { isInt } from 'xtools/utils'
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
   console.log(isInt('This is a number'))
 
   return (
-    <Header />
+    <LoadingButton isLoading={true} />
   )
 }
 
