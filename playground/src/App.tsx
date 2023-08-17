@@ -1,5 +1,5 @@
-import { Header } from '@xtools/components'
-import { isInt } from '@xtools/utils'
+import { Header } from 'xtools/components'
+import { isInt } from 'xtools/utils'
 
 function App() {
   console.log(isInt('1'))
