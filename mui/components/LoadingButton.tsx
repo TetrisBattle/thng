@@ -12,15 +12,17 @@ export const LoadingButton = ({
 }: LoadingButtonProps) => {
 	const loadingButtonRef = useRef<HTMLButtonElement>(null)
 
+	const { width, height } = loadingButtonRef.current
+		? loadingButtonRef.current.getBoundingClientRect()
+		: { width: null, height: null }
+
 	return (
 		<Button
 			ref={loadingButtonRef}
 			{...props}
 			sx={{
-				width: loadingButtonRef.current
-					? loadingButtonRef.current.clientWidth + 1 // +1 to fix rounding issues
-					: null,
-				height: loadingButtonRef.current?.clientHeight,
+				width: width,
+				height: height,
 				...props.sx,
 			}}
 		>

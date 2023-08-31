@@ -1,11 +1,7 @@
 {
 	"name": "@tetrisbattle/xtools",
-	"version": "1.0.16",
+	"version": "1.0.18",
 	"type": "module",
-	"main": "./src/package/index.ts",
-	"files": [
-		"src/package/**/*"
-	],
 	"scripts": {
 		"dev": "vite",
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
