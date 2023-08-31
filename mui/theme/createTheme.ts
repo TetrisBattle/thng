@@ -9,7 +9,7 @@ export const createTheme = (
 	options?: ThemeOptions,
 	...args: object[]
 ): Theme => {
-	const defaultTheme = getDefaultTheme(options?.palette?.mode === 'dark')
+	const defaultTheme = getDefaultTheme(options?.palette?.mode !== 'light')
 	if (options) return muiCreateTheme(defaultTheme, options, ...args)
 	return defaultTheme
 }
