@@ -1,8 +1,0 @@
-{
-	"extends": "../tsconfig.json",
-	"compilerOptions": {
-		"baseUrl": "src"
-	},
-	"include": ["src"],
-	"references": [{ "path": "./tsconfig.node.json" }]
-}
