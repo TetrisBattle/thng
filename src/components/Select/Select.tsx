@@ -1,5 +1,5 @@
+import React, { forwardRef } from 'react'
 import { MenuItem, TextField, TextFieldProps } from '@mui/material'
-import { forwardRef } from 'react'
 import { SelectOption } from './SelectOption'
 
 export type SelectProps = Omit<TextFieldProps, 'select'> & {

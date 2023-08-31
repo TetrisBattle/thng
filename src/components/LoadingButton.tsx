@@ -1,5 +1,5 @@
+import React, { useRef } from 'react'
 import { Button, ButtonProps, CircularProgress } from '@mui/material'
-import { useRef } from 'react'
 
 type LoadingButtonProps = ButtonProps & {
 	isLoading: boolean

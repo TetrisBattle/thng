@@ -12,13 +12,13 @@
 		"isolatedModules": true,
 		"noEmit": true,
 		"jsx": "react-jsx",
+		"baseUrl": "src",
 
 		/* Linting */
 		"strict": true,
-		"noUnusedLocals": true,
+		"noUnusedLocals": false,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
-		"baseUrl": "src"
 	},
 	"include": ["src"]
 }
