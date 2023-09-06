@@ -16,8 +16,9 @@ module.exports = {
 		'no-debugger': 'warn',
 		'no-console': ['warn', { allow: ['error'] }],
 		'@typescript-eslint/no-empty-function': 'warn',
-		'react/react-in-jsx-scope': 'error',
+		'@typescript-eslint/no-explicit-any': 'warn',
 		'@typescript-eslint/no-unused-vars': 'warn',
+		'react/react-in-jsx-scope': 'error',
 		'react/display-name': 'off',
 	},
 }

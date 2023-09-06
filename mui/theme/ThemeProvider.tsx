@@ -1,18 +1,18 @@
 import React from 'react'
-import { CssBaseline, Theme } from '@mui/material'
-import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
-import { createTheme } from './createTheme'
+import { CssBaseline } from '@mui/material'
+import {
+	ThemeProvider as MuiThemeProvider,
+	createTheme,
+} from '@mui/material/styles'
+import { defaultTheme } from './defaultTheme'
 
 type ThemeProviderProps = {
-	theme?: Theme
 	children: React.ReactNode
 }
 
-export const ThemeProvider = ({ theme, children }: ThemeProviderProps) => {
-	const defaultTheme = createTheme()
-
+export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 	return (
-		<MuiThemeProvider theme={theme ?? defaultTheme}>
+		<MuiThemeProvider theme={createTheme(defaultTheme)}>
 			<CssBaseline />
 			{children}
 		</MuiThemeProvider>
