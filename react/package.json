@@ -3,7 +3,10 @@
 	"version": "0.0.1",
 	"description": "React tools",
 	"main": "./main.ts",
-	"keywords": ["react", "mui"],
+	"keywords": [
+		"react",
+		"mui"
+	],
 	"author": "Thien Nguyen",
 	"license": "MIT",
 	"type": "module",
