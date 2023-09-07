@@ -1,6 +1,6 @@
 {
 	"name": "@thng/eslint-config",
-	"version": "0.0.2",
+	"version": "1.0.0",
 	"author": "Thien Nguyen",
 	"license": "MIT",
 	"main": "index.js",
