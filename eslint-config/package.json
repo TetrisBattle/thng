@@ -1,9 +1,16 @@
 {
 	"name": "@thng/eslint-config",
 	"version": "1.0.1",
+	"description": "Eslint rules",
+	"main": "index.js",
+	"keywords": [
+		"eslint",
+		"prettier",
+		"react",
+		"typescript"
+	],
 	"author": "Thien Nguyen",
 	"license": "MIT",
-	"main": "index.js",
 	"peerDependencies": {
 		"@typescript-eslint/eslint-plugin": "^6.5.0",
 		"@typescript-eslint/parser": "^6.5.0",
