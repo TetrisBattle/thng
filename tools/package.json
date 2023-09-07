@@ -1,6 +1,6 @@
 {
-	"name": "@tetrisbattle/xtools",
-	"version": "1.2.1",
+	"name": "@thng/tools",
+	"version": "0.0.1",
 	"type": "module",
 	"main": "./main.ts",
 	"prettier": "./config/prettier",
