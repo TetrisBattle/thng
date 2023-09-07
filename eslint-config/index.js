@@ -10,6 +10,7 @@ module.exports = {
 		es2021: true,
 		jest: true,
 	},
+	ignorePatterns: ['dist', '.eslintrc.cjs'],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		sourceType: 'module',
