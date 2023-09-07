@@ -1,7 +1,7 @@
 {
-	"name": "@thng/tools",
-	"version": "0.0.3",
-	"description": "General tools",
+	"name": "@thng/react",
+	"version": "0.0.1",
+	"description": "React tools",
 	"main": "./main.ts",
 	"keywords": ["react", "mui"],
 	"author": "Thien Nguyen",
