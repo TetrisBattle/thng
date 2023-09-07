@@ -2,5 +2,6 @@ node_modules
 /notes.md
 
 /public
+/index.html
 /src
-vite.config.ts
+/vite.config.ts
