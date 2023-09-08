@@ -8,12 +8,15 @@ import {
 import { getDefaultTheme } from './getDefaultTheme'
 import { deepMerge } from '../../utils/objectHandler'
 
-type BaseThemeProps = {
+type BaseThemeProviderProps = {
 	theme?: ThemeOptions
 	children: React.ReactNode
 }
 
-export const BaseTheme = ({ theme, children }: BaseThemeProps) => {
+export const BaseThemeProvider = ({
+	theme,
+	children,
+}: BaseThemeProviderProps) => {
 	const themeOptions = theme
 		? deepMerge(getDefaultTheme(theme?.palette?.mode !== 'light'), theme)
 		: getDefaultTheme()
