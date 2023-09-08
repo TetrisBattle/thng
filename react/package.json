@@ -1,28 +1,22 @@
 {
-	"name": "@thng/react",
-	"version": "0.0.5",
-	"description": "React tools",
-	"main": "./main.ts",
-	"keywords": [
-		"react",
-		"mui"
-	],
+	"name": "@thng/playground",
+	"version": "0.0.0",
 	"author": "Thien Nguyen",
 	"license": "MIT",
 	"type": "module",
+	"eslintConfig": {
+		"extends": "@thng"
+	},
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"test": "vitest --coverage",
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"publish": "cd package && npm publish --access public"
 	},
-	"peerDependencies": {
-		"@emotion/react": "^11.11.1",
-		"@emotion/styled": "^11.11.0",
-		"@mui/material": "^5.14.7",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+	"dependencies": {
+		"@thng/react": "file:package"
 	},
 	"devDependencies": {
 		"@thng/dev": "^0.0.4",

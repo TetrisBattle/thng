@@ -1,5 +1,4 @@
-import React from 'react'
-import { Box, Button, Typography } from '../main'
+import { Box, Button, Typography } from '@thng/react'
 
 export const App = () => {
 	return (

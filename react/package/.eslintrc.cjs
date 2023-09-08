@@ -1,5 +1,5 @@
 module.exports = {
-	extends: ['@thng', 'plugin:react/recommended'],
+	extends: ['plugin:react/recommended'],
 	rules: {
 		'@typescript-eslint/no-explicit-any': 'warn',
 		'react/react-in-jsx-scope': 'error',

@@ -1,3 +1,3 @@
-# Eslint
+# @thng/eslint-config
 
-Default eslint rules for react development
+Eslint rules for react project

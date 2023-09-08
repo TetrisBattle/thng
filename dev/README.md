@@ -1,3 +1,3 @@
-# Eslint
+# @thng/dev
 
-Add necessary devDependencies for react project
+Necessary devDependencies for react project
