@@ -1,2 +1,2 @@
-export * from './theme'
-export * from './ThemeProvider'
+export * from './BaseTheme'
+export * from './getDefaultTheme'

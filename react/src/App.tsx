@@ -1,10 +1,11 @@
 import React from 'react'
-import { Box, Typography } from '../main'
+import { Box, Button, Typography } from '../main'
 
 export const App = () => {
 	return (
-		<Box>
+		<Box sx={{ p: 2 }}>
 			<Typography>App</Typography>
+			<Button>Button</Button>
 		</Box>
 	)
 }

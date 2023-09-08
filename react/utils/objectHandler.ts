@@ -4,7 +4,7 @@ export function isObject(item: any): item is Record<string, any> {
 	return item && typeof item === 'object' && !Array.isArray(item)
 }
 
-export function mergeDeep<T extends Record<string, any>>(
+export function deepMerge<T extends Record<string, any>>(
 	target: T,
 	...sources: T[]
 ): T {
@@ -18,10 +18,10 @@ export function mergeDeep<T extends Record<string, any>>(
 				if (!target[key]) {
 					// Create a shallow copy of the source[key] type
 					const copy = {} as T[Extract<keyof T, string>]
-					target[key] = mergeDeep(copy, source[key])
+					target[key] = deepMerge(copy, source[key])
 				} else {
 					// Ensure target[key] is the same type as source[key]
-					target[key] = mergeDeep(target[key], source[key])
+					target[key] = deepMerge(target[key], source[key])
 				}
 			} else {
 				// Assign source[key] to target[key] while preserving type
@@ -30,5 +30,5 @@ export function mergeDeep<T extends Record<string, any>>(
 		}
 	}
 
-	return mergeDeep(target, ...sources)
+	return deepMerge(target, ...sources)
 }
