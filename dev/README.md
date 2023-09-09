@@ -1,3 +1,3 @@
 # @thng/dev
 
-Necessary devDependencies for react project
+Necessary devDependencies for react project with vite

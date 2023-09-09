@@ -18,6 +18,6 @@
 		"@thng/react": "file:package"
 	},
 	"devDependencies": {
-		"@thng/dev": "^0.1.1"
+		"@thng/dev": "^1.0.0"
 	}
 }
