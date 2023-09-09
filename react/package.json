@@ -1,9 +1,8 @@
 {
-	"name": "@thng/playground",
+	"name": "@thng/client",
 	"version": "0.0.0",
 	"author": "Thien Nguyen",
 	"license": "MIT",
-	"type": "module",
 	"eslintConfig": {
 		"extends": "@thng"
 	},
@@ -19,7 +18,6 @@
 		"@thng/react": "file:package"
 	},
 	"devDependencies": {
-		"@thng/dev": "^0.0.4",
-		"eslint-plugin-react": "^7.33.2"
+		"@thng/dev": "^0.1.1"
 	}
 }
