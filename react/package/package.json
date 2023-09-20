@@ -1,7 +1,7 @@
 {
 	"name": "@thng/react",
-	"version": "1.0.0",
-	"description": "React tools",
+	"version": "1.0.1",
+	"description": "General tools for react development",
 	"main": "./main.ts",
 	"keywords": [
 		"react",

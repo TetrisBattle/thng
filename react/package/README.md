@@ -1,3 +1,3 @@
 # @thng/react
 
-Tools for react project
+General tools for react development

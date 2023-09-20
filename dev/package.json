@@ -1,6 +1,6 @@
 {
   "name": "@thng/dev",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Developer dependencies",
   "main": "main.ts",
   "keywords": [
