@@ -1,0 +1,16 @@
+{
+	"name": "@thng/create-react",
+	"version": "0.1.0",
+	"description": "React template",
+	"keywords": [
+		"react",
+		"material-ui",
+		"typescript"
+	],
+	"author": "Thien Nguyen",
+	"license": "MIT",
+	"type": "module",
+	"bin": {
+		"create-react": "./index.js"
+	}
+}
