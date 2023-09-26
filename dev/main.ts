@@ -1,4 +1,4 @@
-export { defineConfig } from 'vitest/config'
+export { defineConfig } from 'vite'
 
 import viteConfig from './vite.config'
 export { viteConfig }
