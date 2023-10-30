@@ -15,7 +15,9 @@
 		"publish": "cd package && npm publish --access public"
 	},
 	"dependencies": {
-		"@thng/react": "file:package"
+		"@thng/react": "file:package",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
 		"@thng/dev": "^1.0.0"
