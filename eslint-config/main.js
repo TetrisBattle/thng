@@ -1,6 +1,6 @@
-const base = require('./src/rules/base')
-const prettier = require('./src/rules/prettier')
-const react = require('./src/rules/react')
+const base = require('./rules/base')
+const prettier = require('./rules/prettier')
+const react = require('./rules/react')
 
 module.exports = {
 	env: {

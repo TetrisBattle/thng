@@ -5,16 +5,27 @@ module.exports = {
 	extends: [
 		'eslint:recommended',
 		'plugin:eslint-plugin/recommended',
-		'plugin:node/recommended',
 		'plugin:prettier/recommended',
 	],
+	parserOptions: {
+		ecmaVersion: 'latest',
+	},
 	env: {
 		node: true,
 	},
-	overrides: [
-		{
-			files: ['tests/**/*.js'],
-			env: { mocha: true },
-		},
-	],
+	rules: {
+		'prettier/prettier': [
+			'warn',
+			{
+				printWidth: 80,
+				tabWidth: 4,
+				useTabs: true,
+				semi: false,
+				singleQuote: true,
+				jsxSingleQuote: true,
+				trailingComma: 'es5',
+				endOfLine: 'auto',
+			},
+		],
+	},
 }

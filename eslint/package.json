@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-thng",
-  "version": "0.0.1",
+  "version": "0.0.19",
   "description": "eslint",
   "keywords": [
     "eslint",
@@ -8,28 +8,11 @@
     "eslint-plugin"
   ],
   "author": "Thien Nguyen",
-  "main": "./lib/index.js",
-  "exports": "./lib/index.js",
-  "scripts": {
-    "lint": "npm-run-all \"lint:*\"",
-    "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
-    "lint:js": "eslint .",
-    "test": "mocha tests --recursive",
-    "update:eslint-docs": "eslint-doc-generator"
-  },
-  "dependencies": {
-    "requireindex": "^1.2.0"
-  },
+  "main": "main.js",
+  "license": "MIT",
   "devDependencies": {
-    "eslint": "^8.19.0",
-    "eslint-doc-generator": "^1.0.0",
     "eslint-plugin-eslint-plugin": "^5.0.0",
-    "eslint-plugin-node": "^11.1.0",
-    "mocha": "^10.0.0",
-    "npm-run-all": "^4.1.5"
-  },
-  "engines": {
-    "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
+    "eslint-plugin-node": "^11.1.0"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.13.2",
@@ -37,8 +20,9 @@
     "eslint": "^8.54.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-refresh": "^0.4.3",
     "prettier": "^3.1.0",
     "typescript": "^5.3.2"
-  },
-  "license": "MIT"
+  }
 }

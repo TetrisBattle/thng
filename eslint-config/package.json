@@ -1,6 +1,6 @@
 {
 	"name": "@thng/eslint-config",
-	"version": "1.0.16",
+	"version": "1.0.17",
 	"description": "Eslint rules",
 	"main": "main.js",
 	"keywords": [
