@@ -1,4 +1,4 @@
-module.exports = {
+exports.prettier = {
 	'prettier/prettier': [
 		'warn',
 		{

@@ -1,6 +1,6 @@
-function f() {
+function f2() {
 	const x = 10
-		console.log(x)
+	console.log(x)
 
-			function asd() {}
+		function asd() {}
 }

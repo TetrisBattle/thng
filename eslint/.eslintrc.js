@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = {
 	root: true,
 	extends: [
@@ -8,10 +6,13 @@ module.exports = {
 		'plugin:prettier/recommended',
 	],
 	parserOptions: {
+		sourceType: 'module',
 		ecmaVersion: 'latest',
 	},
 	env: {
 		node: true,
+		commonjs: true,
+		es2021: true,
 	},
 	rules: {
 		'prettier/prettier': [
