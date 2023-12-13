@@ -1,8 +1,6 @@
-const { prettier } = require('./prettier.js')
-
-exports.recommended = {
+exports.base = {
 	root: true,
-	extends: ['eslint:recommended', 'plugin:prettier/recommended'],
+	extends: ['eslint:recommended'],
 	env: {
 		node: true,
 		commonjs: true,
@@ -16,6 +14,5 @@ exports.recommended = {
 		'no-unused-vars': 'warn',
 		'no-debugger': 'warn',
 		// 'no-console': ['warn', { allow: ['error'] }],
-		...prettier,
 	},
 }
