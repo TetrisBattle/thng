@@ -1,16 +1,23 @@
 {
 	"name": "@thng/create-react",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "React template",
 	"keywords": [
 		"react",
 		"material-ui",
-		"typescript"
+		"typescript",
+		"template"
 	],
 	"author": "Thien Nguyen",
 	"license": "MIT",
 	"type": "module",
 	"bin": {
 		"create-react": "./index.js"
+	},
+	"eslintConfig": {
+		"extends": "plugin:thng/recommended"
+	},
+	"devDependencies": {
+		"eslint-plugin-thng": "^1.0.1"
 	}
 }

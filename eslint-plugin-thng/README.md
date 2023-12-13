@@ -5,7 +5,7 @@
 Install `eslint-plugin-thng`:
 
 ```sh
-npm install eslint-plugin-thng --save-dev
+npm i -D eslint-plugin-thng
 ```
 
 ## Usage

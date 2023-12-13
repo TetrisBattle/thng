@@ -1,3 +1,11 @@
 # @thng/react
 
-General tools for react development
+## Description
+
+Tools package for react development
+
+## Installation
+
+```sh
+npm i @thng/react
+```

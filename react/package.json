@@ -1,8 +1,6 @@
 {
 	"name": "@thng/react",
-	"version": "1.0.4",
-	"description": "General tools for react development",
-	"main": "./main.ts",
+	"version": "1.0.5",
 	"keywords": [
 		"react",
 		"material-ui"
@@ -10,6 +8,7 @@
 	"author": "Thien Nguyen",
 	"license": "MIT",
 	"type": "module",
+	"main": "./main.ts",
 	"peerDependencies": {
 		"@emotion/react": "^11.11.1",
 		"@emotion/styled": "^11.11.0",

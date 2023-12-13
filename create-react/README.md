@@ -1,7 +1,15 @@
 # @thng/create-react
 
+## Description
+
 Create react template from <https://github.com/TetrisBattle/client-app>
 
-## How to use
+## Installation
 
-Run: `npm init @thng/react` or `npm init @thng/react <project-name>`
+```sh
+npm init @thng/react
+```
+
+```sh
+npm init @thng/react <project-name>
+```

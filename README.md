@@ -1,3 +1,5 @@
 # thng (Thien Nguyen)
 
-Packages to share files between react projects
+The project contains npm packages
+
+Every package has their own installation README.md file

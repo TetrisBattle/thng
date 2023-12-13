@@ -1,15 +1,14 @@
 {
   "name": "eslint-plugin-thng",
-  "version": "1.0.1",
-  "description": "eslint",
+  "version": "1.0.2",
   "keywords": [
     "eslint",
     "eslintplugin",
     "eslint-plugin"
   ],
   "author": "Thien Nguyen",
-  "main": "main.js",
   "license": "MIT",
+  "main": "main.js",
   "devDependencies": {
     "eslint-plugin-eslint-plugin": "^5.0.0",
     "eslint-plugin-node": "^11.1.0"
