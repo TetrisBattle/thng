@@ -7,8 +7,8 @@ const { react } = require('./rules/react.js')
 
 module.exports = {
 	configs: {
-		recommended: { ...recommended },
-		ts: deepMerge({ ...typescript }, { ...recommended }),
-		react: deepMerge({ ...typescript }, { ...react }, { ...recommended }),
+		recommended: recommended,
+		ts: deepMerge({}, typescript, recommended),
+		react: deepMerge({}, typescript, react, recommended),
 	},
 }

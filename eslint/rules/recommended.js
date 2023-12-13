@@ -13,8 +13,9 @@ exports.recommended = {
 		ecmaVersion: 'latest',
 	},
 	rules: {
+		'no-unused-vars': 'warn',
 		'no-debugger': 'warn',
-		'no-console': ['warn', { allow: ['error'] }],
+		// 'no-console': ['warn', { allow: ['error'] }],
 		...prettier,
 	},
 }
