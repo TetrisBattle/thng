@@ -5,7 +5,6 @@ exports.react = {
 		browser: true,
 		jest: true,
 	},
-	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaFeatures: { jsx: true },
 	},

@@ -1,0 +1,26 @@
+{
+	"name": "test",
+	"version": "1.0.0",
+	"type": "module",
+	"license": "MIT",
+	"author": "Thien Nguyen",
+	"eslintConfig": {
+		"extends": "plugin:thng/react"
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"test": "vitest --coverage",
+		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+		"preview": "vite preview",
+		"publish": "cd package && npm publish --access public"
+	},
+	"dependencies": {
+		"@thng/react": "^1.0.4",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@thng/dev": "^1.2.0"
+	}
+}
