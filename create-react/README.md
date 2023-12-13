@@ -1,6 +1,6 @@
 # @thng/create-react
 
-React template from <https://github.com/TetrisBattle/client-app>
+Create react template from <https://github.com/TetrisBattle/client-app>
 
 ## How to use
 
