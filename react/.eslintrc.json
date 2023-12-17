@@ -1,5 +1,5 @@
 {
-	"extends": ["plugin:react/recommended", "plugin:thng/react"],
+	"extends": ["plugin:react/recommended", "plugin:thng/recommendedReact"],
 	"rules": {
 		"react/react-in-jsx-scope": "error",
 		"react/display-name": "off"

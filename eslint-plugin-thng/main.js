@@ -10,7 +10,7 @@ module.exports = {
 	configs: {
 		recommended: deepMerge({}, base, prettier),
 		recommendedTs: deepMerge({}, base, typescript, prettier),
-		RecommendedReact: deepMerge({}, base, typescript, react, prettier),
+		recommendedReact: deepMerge({}, base, typescript, react, prettier),
 
 		base: base,
 		typescript: typescript,
