@@ -5,7 +5,9 @@
 	"license": "MIT",
 	"type": "module",
 	"eslintConfig": {
-		"extends": "plugin:thng/react"
+		"extends": [
+			"plugin:thng/recommendedReact"
+		]
 	},
 	"scripts": {
 		"dev": "vite",
@@ -20,6 +22,6 @@
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
-		"@thng/dev": "^1.2.3"
+		"@thng/dev": "^1.2.4"
 	}
 }

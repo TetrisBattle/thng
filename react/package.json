@@ -20,6 +20,6 @@
 		"@types/react": "^18.2.15",
 		"@types/react-dom": "^18.2.7",
 		"eslint-plugin-react": "^7.33.2",
-		"eslint-plugin-thng": "^1.0.4"
+		"eslint-plugin-thng": "^1.0.6"
 	}
 }

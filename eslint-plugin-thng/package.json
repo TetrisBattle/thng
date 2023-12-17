@@ -1,6 +1,6 @@
 {
 	"name": "eslint-plugin-thng",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"keywords": [
 		"eslint",
 		"eslintplugin",
@@ -26,6 +26,6 @@
 	"devDependencies": {
 		"eslint-plugin-eslint-plugin": "^5.0.0",
 		"eslint-plugin-node": "^11.1.0",
-		"eslint-plugin-thng": "^1.0.2"
+		"eslint-plugin-thng": "^1.0.6"
 	}
 }
