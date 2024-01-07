@@ -1,7 +1,7 @@
 // Make nested type readable
 export type Prettify<T> = {
 	[K in keyof T]: T[K]
-} & object
+}
 
 // PartialSelected<type, key>
 // Omit<T, K> = Get type without key
