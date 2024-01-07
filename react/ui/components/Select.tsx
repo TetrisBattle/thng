@@ -1,9 +1,15 @@
 import React, { forwardRef } from 'react'
 import { MenuItem, TextField, TextFieldProps } from '@mui/material'
-import { SelectOption } from './SelectOption'
+
+export type SelectOptions =
+	| string[]
+	| {
+			value: string | number
+			label: string
+	  }[]
 
 export type SelectProps = Omit<TextFieldProps, 'select'> & {
-	options: SelectOption[]
+	options: SelectOptions
 	addEmptyOption?: boolean
 }
 
@@ -23,11 +29,20 @@ export const Select = forwardRef<HTMLDivElement, SelectProps>(
 				{...otherProps}
 			>
 				{addEmptyOption && <MenuItem value=''>&nbsp;</MenuItem>}
-				{options.map((option) => (
-					<MenuItem key={option.value} value={option.value}>
-						{option.label}
-					</MenuItem>
-				))}
+				{options.map((option) => {
+					if (typeof option === 'string') {
+						return (
+							<MenuItem key={option} value={option}>
+								{option}
+							</MenuItem>
+						)
+					}
+					return (
+						<MenuItem key={option.value} value={option.value}>
+							{option.label}
+						</MenuItem>
+					)
+				})}
 			</TextField>
 		)
 	}
