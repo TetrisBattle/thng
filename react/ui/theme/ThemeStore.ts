@@ -4,7 +4,8 @@ import { deepMerge } from '../../utils/objectHandler'
 
 export class ThemeStore {
 	isDarkMode = true
-	themeOptions: ThemeOptions = {
+
+	private themeOptions: ThemeOptions = {
 		mixins: {
 			toolbar: {}, // This will get rid of minHeight styles
 		},
@@ -53,12 +54,14 @@ export class ThemeStore {
 			},
 		},
 	}
-	lightThemeOptions: ThemeOptions = {
+
+	private lightThemeOptions: ThemeOptions = {
 		palette: {
 			mode: 'light',
 		},
 	}
-	darkThemeOptions: ThemeOptions = {
+
+	private darkThemeOptions: ThemeOptions = {
 		palette: {
 			mode: 'dark',
 			primary: {
@@ -82,8 +85,8 @@ export class ThemeStore {
 		)
 	}
 
-	toggleDarkMode = () => {
-		this.isDarkMode = !this.isDarkMode
+	setIsDarkMode = (isDarkMode: boolean) => {
+		this.isDarkMode = isDarkMode
 	}
 
 	setThemeOptions = (options: ThemeOptions) => {
