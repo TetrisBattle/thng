@@ -1,2 +1,2 @@
-export * from './BaseThemeProvider'
-export * from './getDefaultTheme'
+export { BaseThemeProvider } from './BaseThemeProvider'
+export { useThemeStore } from './useThemeStore'

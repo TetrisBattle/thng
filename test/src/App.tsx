@@ -1,14 +1,13 @@
-import { Box, Button, Typography, isInt } from '@thng/react'
+import { Box, Button, Typography, useThemeStore } from '@thng/react'
 
 export const App = () => {
-	console.log(isInt('asd'))
+	const themeStore = useThemeStore()
 
 	return (
 		<>
-			<div>asd</div>
 			<Box sx={{ p: 2 }}>
 				<Typography>App</Typography>
-				<Button>Button</Button>
+				<Button onClick={themeStore.toggleDarkMode}>Theme</Button>
 			</Box>
 		</>
 	)

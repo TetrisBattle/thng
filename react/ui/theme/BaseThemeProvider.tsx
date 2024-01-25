@@ -1,32 +1,28 @@
-import React from 'react'
-import {
-	CssBaseline,
-	ThemeOptions,
-	ThemeProvider,
-	createTheme,
-} from '@mui/material'
-import { getDefaultTheme } from './getDefaultTheme'
-import { deepMerge } from '../../utils/objectHandler'
+import React, { createContext } from 'react'
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material'
+import { ThemeStore } from './ThemeStore.ts'
+import { useThemeStore } from './useThemeStore'
+import { observer } from 'mobx-react-lite'
+
+const themeStore = new ThemeStore()
+export const ThemeStoreContext = createContext(themeStore)
 
 type BaseThemeProviderProps = {
-	theme?: ThemeOptions
 	children: React.ReactNode
 }
 
-export const BaseThemeProvider = ({
-	theme,
-	children,
-}: BaseThemeProviderProps) => {
-	const themeOptions = theme
-		? deepMerge(getDefaultTheme(theme?.palette?.mode !== 'light'), theme)
-		: getDefaultTheme()
+export const BaseThemeProvider = observer(
+	({ children }: BaseThemeProviderProps) => {
+		const themeStore = useThemeStore()
+		const theme = createTheme(themeStore.theme)
 
-	const createdTheme = createTheme(themeOptions)
-
-	return (
-		<ThemeProvider theme={createdTheme}>
-			<CssBaseline />
-			{children}
-		</ThemeProvider>
-	)
-}
+		return (
+			<ThemeStoreContext.Provider value={themeStore}>
+				<ThemeProvider theme={theme}>
+					<CssBaseline />
+					{children}
+				</ThemeProvider>
+			</ThemeStoreContext.Provider>
+		)
+	}
+)
