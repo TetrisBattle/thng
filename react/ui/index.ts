@@ -1,3 +1,6 @@
 export * from '@mui/material'
-export * from './components'
-export * from './theme'
+
+export { LoadingButton } from './components/LoadingButton'
+
+export { BaseThemeProvider } from './theme/BaseThemeProvider'
+export { useThemeStore } from './theme/useThemeStore'
