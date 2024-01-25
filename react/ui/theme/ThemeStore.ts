@@ -85,6 +85,10 @@ export class ThemeStore {
 		)
 	}
 
+	toggleDarkMode = () => {
+		this.isDarkMode = !this.isDarkMode
+	}
+
 	setIsDarkMode = (isDarkMode: boolean) => {
 		this.isDarkMode = isDarkMode
 	}
