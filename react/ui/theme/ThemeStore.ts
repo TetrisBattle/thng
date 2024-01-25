@@ -75,6 +75,9 @@ export class ThemeStore {
 
 	constructor() {
 		makeAutoObservable(this)
+
+		const isDarkMode = localStorage.getItem('isDarkMode')
+		if (isDarkMode) this.setIsDarkMode(isDarkMode === 'true')
 	}
 
 	get theme(): ThemeOptions {
@@ -85,12 +88,13 @@ export class ThemeStore {
 		)
 	}
 
-	toggleDarkMode = () => {
-		this.isDarkMode = !this.isDarkMode
-	}
-
 	setIsDarkMode = (isDarkMode: boolean) => {
 		this.isDarkMode = isDarkMode
+		localStorage.setItem('isDarkMode', isDarkMode.toString())
+	}
+
+	toggleDarkMode = () => {
+		this.setIsDarkMode(!this.isDarkMode)
 	}
 
 	setThemeOptions = (options: ThemeOptions) => {
