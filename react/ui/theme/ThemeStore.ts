@@ -1,77 +1,17 @@
 import { ThemeOptions, PaletteMode } from '@mui/material'
 import { makeAutoObservable } from 'mobx'
 import { deepMerge } from '../../utils/objectHandler'
+import {
+	defaultDarkThemeOptions,
+	defaultLightThemeOptions,
+	defaultThemeOptions,
+} from './defaultThemeOptions'
 
 export class ThemeStore {
 	paletteMode: PaletteMode = 'dark'
-
-	private defaultThemeOptions: ThemeOptions = {
-		mixins: {
-			toolbar: {}, // This will get rid of minHeight styles
-		},
-		typography: {
-			h1: {
-				fontSize: '3rem', // 48px
-			},
-			h2: {
-				fontSize: '2rem', //32px
-			},
-			h3: {
-				fontSize: '1.5rem', // 24px
-			},
-			h4: {
-				fontSize: '1.25rem', // 20px
-			},
-			h5: {
-				fontSize: '1rem', // 16px
-			},
-			button: {
-				fontSize: '1rem',
-				textTransform: 'none',
-			},
-		},
-		components: {
-			MuiButton: {
-				defaultProps: {
-					variant: 'contained',
-				},
-			},
-			MuiTextField: {
-				defaultProps: {
-					autoComplete: 'off',
-					fullWidth: true,
-				},
-			},
-			MuiAppBar: {
-				defaultProps: {
-					position: 'static',
-				},
-			},
-			MuiToolbar: {
-				defaultProps: {
-					disableGutters: true,
-				},
-			},
-		},
-	}
-
-	private lightThemeOptions: ThemeOptions = {
-		palette: {
-			mode: 'light',
-		},
-	}
-
-	private darkThemeOptions: ThemeOptions = {
-		palette: {
-			mode: 'dark',
-			primary: {
-				main: '#BB85FC',
-			},
-			secondary: {
-				main: '#10DAC6',
-			},
-		},
-	}
+	private themeOptions = defaultThemeOptions
+	private darkThemeOptions = defaultDarkThemeOptions
+	private lightThemeOptions = defaultLightThemeOptions
 
 	constructor() {
 		makeAutoObservable(this)
@@ -80,8 +20,8 @@ export class ThemeStore {
 		if (paletteMode) this.setPaletteMode(paletteMode as PaletteMode)
 	}
 
-	get themeOptions(): ThemeOptions {
-		const themeCopy = { ...this.defaultThemeOptions }
+	get theme(): ThemeOptions {
+		const themeCopy = { ...this.themeOptions }
 		return deepMerge(
 			themeCopy,
 			this.paletteMode === 'dark'
@@ -100,18 +40,31 @@ export class ThemeStore {
 		else this.setPaletteMode('dark')
 	}
 
-	setThemeOptions = (options: ThemeOptions) => {
-		const themeOptionsCopy = { ...this.defaultThemeOptions }
-		this.defaultThemeOptions = deepMerge(themeOptionsCopy, options)
-	}
-
-	setDarkThemeOptions = (options: ThemeOptions) => {
-		const darkThemeOptionsCopy = { ...this.darkThemeOptions }
-		this.darkThemeOptions = deepMerge(darkThemeOptionsCopy, options)
-	}
-
-	setLightThemeOptions = (options: ThemeOptions) => {
-		const lightThemeOptionsCopy = { ...this.lightThemeOptions }
-		this.lightThemeOptions = deepMerge(lightThemeOptionsCopy, options)
+	addThemeOptions = (...options: ThemeOptions[]) => {
+		options.forEach((option) => {
+			switch (option.palette?.mode) {
+				case 'dark': {
+					const darkThemeOptionsCopy = { ...this.darkThemeOptions }
+					this.darkThemeOptions = deepMerge(
+						darkThemeOptionsCopy,
+						option
+					)
+					break
+				}
+				case 'light': {
+					const lightThemeOptionsCopy = { ...this.lightThemeOptions }
+					this.lightThemeOptions = deepMerge(
+						lightThemeOptionsCopy,
+						option
+					)
+					break
+				}
+				default: {
+					const themeOptionsCopy = { ...this.themeOptions }
+					this.themeOptions = deepMerge(themeOptionsCopy, option)
+					break
+				}
+			}
+		})
 	}
 }

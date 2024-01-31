@@ -14,7 +14,7 @@ type BaseThemeProviderProps = {
 export const BaseThemeProvider = observer(
 	({ children }: BaseThemeProviderProps) => {
 		const themeStore = useThemeStore()
-		const theme = createTheme(themeStore.themeOptions)
+		const theme = createTheme(themeStore.theme)
 
 		return (
 			<ThemeStoreContext.Provider value={themeStore}>
