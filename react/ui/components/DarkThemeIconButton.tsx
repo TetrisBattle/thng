@@ -8,7 +8,7 @@ export const DarkThemeIconButton = (iconButtonProps: IconButtonProps) => {
 
 	return (
 		<IconButton
-			onClick={themeStore.toggleDarkMode}
+			onClick={themeStore.togglePaletteMode}
 			{...iconButtonProps}
 			sx={{ color: 'inherit', ...iconButtonProps.sx }}
 		>

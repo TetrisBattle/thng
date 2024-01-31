@@ -1,11 +1,11 @@
-import { ThemeOptions } from '@mui/material'
+import { ThemeOptions, PaletteMode } from '@mui/material'
 import { makeAutoObservable } from 'mobx'
 import { deepMerge } from '../../utils/objectHandler'
 
 export class ThemeStore {
-	isDarkMode = true
+	paletteMode: PaletteMode = 'dark'
 
-	private themeOptions: ThemeOptions = {
+	private defaultThemeOptions: ThemeOptions = {
 		mixins: {
 			toolbar: {}, // This will get rid of minHeight styles
 		},
@@ -76,39 +76,42 @@ export class ThemeStore {
 	constructor() {
 		makeAutoObservable(this)
 
-		const isDarkMode = localStorage.getItem('isDarkMode')
-		if (isDarkMode) this.setIsDarkMode(isDarkMode === 'true')
+		const paletteMode = localStorage.getItem('paletteMode')
+		if (paletteMode) this.setPaletteMode(paletteMode as PaletteMode)
 	}
 
-	get theme(): ThemeOptions {
-		const themeCopy = { ...this.themeOptions }
+	get themeOptions(): ThemeOptions {
+		const themeCopy = { ...this.defaultThemeOptions }
 		return deepMerge(
 			themeCopy,
-			this.isDarkMode ? this.darkThemeOptions : this.lightThemeOptions
+			this.paletteMode === 'dark'
+				? this.darkThemeOptions
+				: this.lightThemeOptions
 		)
 	}
 
-	setIsDarkMode = (isDarkMode: boolean) => {
-		this.isDarkMode = isDarkMode
-		localStorage.setItem('isDarkMode', isDarkMode.toString())
+	setPaletteMode = (paletteMode: PaletteMode) => {
+		this.paletteMode = paletteMode
+		localStorage.setItem('paletteMode', paletteMode)
 	}
 
-	toggleDarkMode = () => {
-		this.setIsDarkMode(!this.isDarkMode)
+	togglePaletteMode = () => {
+		if (this.paletteMode === 'dark') this.setPaletteMode('light')
+		else this.setPaletteMode('dark')
 	}
 
 	setThemeOptions = (options: ThemeOptions) => {
-		const themeOptionsCopy = { ...this.themeOptions }
-		this.themeOptions = deepMerge(themeOptionsCopy, options)
-	}
-
-	setLightThemeOptions = (options: ThemeOptions) => {
-		const lightThemeOptionsCopy = { ...this.lightThemeOptions }
-		this.lightThemeOptions = deepMerge(lightThemeOptionsCopy, options)
+		const themeOptionsCopy = { ...this.defaultThemeOptions }
+		this.defaultThemeOptions = deepMerge(themeOptionsCopy, options)
 	}
 
 	setDarkThemeOptions = (options: ThemeOptions) => {
 		const darkThemeOptionsCopy = { ...this.darkThemeOptions }
 		this.darkThemeOptions = deepMerge(darkThemeOptionsCopy, options)
+	}
+
+	setLightThemeOptions = (options: ThemeOptions) => {
+		const lightThemeOptionsCopy = { ...this.lightThemeOptions }
+		this.lightThemeOptions = deepMerge(lightThemeOptionsCopy, options)
 	}
 }
